@@ -19,25 +19,27 @@ const Title = (props: ITitleProps) => {
 
 const Content = (props: ContentProps) => {
     return (
-    <React.Fragment>
-        <p>{props.text1}</p>
-        <p>{props.text2}</p>
-        <div>{props.year}</div>
-    </React.Fragment>
+        <React.Fragment>
+            <p>{props.text1}</p>
+            <p>{props.text2}</p>
+            <div>{props.year}</div>
+        </React.Fragment>
     )
 }
 
-function App (){
+function App() {
     return (
         <>
             <Title text="React" />
             <Title text="TS" />
-            <Content text1="Hello, World!" text2='Hello, TS!' year={2023} />
+            <Content text1={'Hello, World!'} text2={'Hello, TS!'} year={2023} />
         </>
     )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(<React.StrictMode>
-    <App />
-</React.StrictMode>)
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)
