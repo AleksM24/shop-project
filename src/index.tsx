@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -5,16 +6,23 @@ interface ITitleProps {
     text: string
 }
 
+type ContentProps = {
+    text1: string
+    text2: string
+    year: number
+}
+
 const Title = (props: ITitleProps) => {
     console.log(props)
     return <h1>Hello {props.text}</h1>
 }
 
-const Content = () => {
+const Content = (props: ContentProps) => {
     return (
     <React.Fragment>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, id! Dolore impedit odit ad. Reprehenderit officiis tempore voluptatem? Corporis incidunt earum cum saepe asperiores laudantium! Atque, consectetur quo. Possimus, aspernatur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam, illum recusandae dolore earum autem est eius dicta iure nostrum illo harum vero voluptatum quos id veniam, cumque asperiores quod!</p>
+        <p>{props.text1}</p>
+        <p>{props.text2}</p>
+        <div>{props.year}</div>
     </React.Fragment>
     )
 }
@@ -24,7 +32,7 @@ function App (){
         <>
             <Title text="React" />
             <Title text="TS" />
-            <Content />
+            <Content text1="Hello, World!" text2='Hello, TS!' year={2023} />
         </>
     )
 }
