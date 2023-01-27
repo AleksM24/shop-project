@@ -1,18 +1,17 @@
+import classes from './Content.module.css'
+
 type Props = {
     text1: string
     text2: string
     year: number
 }
 
+console.log(classes)
+
 export const Content = (props: Props) => {
   return (
     <>
-    <p style={{
-        color: 'white',
-        backgroundColor: 'green',
-        padding: '15px',
-    }}
-    >{props.text1}</p>
+    <p className={`${classes.text}`}>{props.text1}</p>
     <p>{props.text2}</p>
     <div>{props.year}</div>
 </>
