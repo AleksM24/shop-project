@@ -1,5 +1,14 @@
 import { Grid, Typography } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
+import productsArray from 'utils/productsArray'
+
+type ProductProps = {
+    title: string
+    description: string
+    type: string
+    capacity: string
+    price: number
+}
 
 type Props = {}
 
@@ -11,42 +20,17 @@ const ProductsList = (props: Props) => {
             </Typography>
 
             <Grid container spacing={3}>
-                <Grid item xs={12} sm={6} md={4}>
-                    {' '}
-                    <ProductsListItem
-                        title={'iPhone 14 Pro'}
-                        description={
-                            'iPhone 14 Pro.'
-                        }
-                        type={'Phone'}
-                        capacity={'256 Gb'}
-                        price={1200}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    {' '}
-                    <ProductsListItem
-                        title={'Samsung Galaxy'}
-                        description={
-                            'Samsung Galaxy.'
-                        }
-                        type={'Tablet'}
-                        capacity={'128 Gb'}
-                        price={1000}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    {' '}
-                    <ProductsListItem
-                        title={'Redmi Note 10'}
-                        description={
-                            'Redmi Note 10.'
-                        }
-                        type={'Phone'}
-                        capacity={'64 Gb'}
-                        price={500}
-                    />
-                </Grid>
+                {productsArray.map((product: ProductProps) => (
+                    <Grid item xs={12} sm={6} md={4}>
+                        <ProductsListItem
+                            title={product.title}
+                            description={product.description}
+                            type={product.type}
+                            capacity={product.capacity}
+                            price={product.price}
+                        />
+                    </Grid>
+                ))}
             </Grid>
         </>
     )
