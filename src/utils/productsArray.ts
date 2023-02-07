@@ -5,6 +5,7 @@ type Product = {
     type: string
     capacity: string
     price: number
+    image: string
 }
 
 const productsArray: Product[] = [
@@ -15,6 +16,7 @@ const productsArray: Product[] = [
         type: 'phone',
         capacity: '256',
         price: 2000,
+        image: 'imeges/iPhone-black.jpg'
     },
     {
         id: 2,
@@ -23,6 +25,8 @@ const productsArray: Product[] = [
         type: 'phone',
         capacity: '64',
         price: 1500,
+        image: 'imeges/iPhone-purple.jpg'
+
     },
     {
         id: 3,
@@ -31,6 +35,8 @@ const productsArray: Product[] = [
         type: 'phone',
         capacity: '32',
         price: 500,
+        image: 'imeges/iPhone-gold.jpg'
+
     },
     {
         id: 4,
@@ -39,6 +45,8 @@ const productsArray: Product[] = [
         type: 'phone',
         capacity: '512',
         price: 1600,
+        image: 'imeges/iPhone-blue.jpg'
+
     },
     {
         id: 5,
@@ -47,6 +55,8 @@ const productsArray: Product[] = [
         type: 'phone',
         capacity: '32',
         price: 800,
+        image: 'imeges/iPhone-green.jpg'
+
     },
     {
         id: 6,
@@ -55,6 +65,7 @@ const productsArray: Product[] = [
         type: 'phone',
         capacity: '128',
         price: 200,
+        image: 'imeges/iPhone-silver.jpg'
     },
 ]
 
